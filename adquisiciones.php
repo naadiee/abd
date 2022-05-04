@@ -45,19 +45,38 @@ $result = $bd->obtenerPeliculas();
                     <div class='botonCancelar'>
                         <form action='gestionPrestamos.php' method='POST'>
                             <input type='hidden' name='hidden_id' value='$idPeli'>
-                            <input type='submit' id='add' name='delete_peli' value='Eliminar titulo'></p>                            </form>
+                            <input type='submit' id='delete_peli' name='delete_peli' value='Eliminar titulo'></p>                          
+                        </form>
                     </div>
+
                     <div class='botonCancelar'>
                         <form action='gestionPrestamos.php' method='POST'>
                             <input type='hidden' name='hidden_id' value='$idPeli'>
-                            <input type='submit' id='add' name='ampliar_peli' value='Ampliar tiempo'></p>                            </form>
+                            <input type='submit' id='ampliar_peli' name='ampliar_peli' value='Ampliar tiempo'></p>                            
+                        </form>
                     </div>
 
                     <div class='botonCancelar'>
                     <form action='gestionPrestamos.php' method='POST'>
                         <input type='hidden' name='hidden_id' value='$idPeli'>
-                        <input type='submit' id='add' name='reportar_daños' value='Reportar daños'></p>                            </form>
-                </div>
+                        <input type='submit' id='reportar_danos' name='reportar_danos' value='Reportar daños'></p>
+                        <select name='danos' id='danos'>
+                        <option value='discoRoto'>Disco Roto</option>
+                        <option value='cajaRota'>Caja Rota</option>
+                        <option value='discoRayado'>Disco rayado</option>
+                        <option value='otros'>otros</option>
+                    </select>                          
+                    </form>
+                    </div>
+
+                    <div class='botonCancelar'>
+                        <form action='gestionPrestamos.php' method='POST'>
+                            <input type='hidden' name='hidden_id' value='$idPeli'>
+                            <input type='submit' id='devolver_peli' name='devolver_peli' value='Devolver'></p>                            
+                        </form>
+                    </div>
+                    
+
         
                 
 

@@ -25,6 +25,11 @@ $result = $bd->obtenerPeliculas();
         <?php
             foreach($result as $fila){ //falta corchete fin 
                 $link = "pelicula.php?id=" . $fila["id"];
+                $disponible = $fila["disponible"]; 
+
+                if($disponible === "si"){
+
+                
 
         ?>
                 
@@ -34,7 +39,10 @@ $result = $bd->obtenerPeliculas();
 
             </div>
 
-        <?php } ?>
+        <?php 
+                }
+        } 
+        ?>
         
         </div>
 

@@ -141,13 +141,49 @@ class consultasBD{
 
     public function datosPrestamo($idSocio, $idPeli){
         $conn = $this->bd->conexionBD(); 
-        $consulta = "SELECT FROM prestamo WHERE idSocio = '$idSocio' AND idPelicula = '$idPeli' ";
+        $consulta = "SELECT * FROM prestamo WHERE idSocio = '$idSocio' AND idPelicula = '$idPeli' ";
         $result = $conn->query($consulta);
         $fila = $result->fetch_assoc();
 
         return $fila; 
     }
 
+    public function ampliarFechaPrestamo($idPrestamo,$nuevaFecha){
+        $conn = $this->bd->conexionBD();
+        $consulta = "UPDATE prestamo SET fechaInicio = '$nuevaFecha' WHERE id = '$idPrestamo'  ";
+        $conn->query($consulta);
+        
+    }
+
+    public function addPeliculaRota($idPeli, $idSocio, $motivo){
+        $conn = $this->bd->conexionBD();
+        $consulta = "INSERT INTO peliculaRota (idPeli, idSocio, motivo) VALUES ('$idPeli', '$idSocio', '$motivo')"; 
+        $conn->query($consulta);
+
+
+    }
+    public function peliculaNoDisponible($idPeli){
+        $conn = $this->bd->conexionBD(); 
+        $consulta = "UPDATE pelicula SET disponible = 'no' WHERE id = '$idPeli' ";
+        $conn->query($consulta);
+        
+
+    }
+
+
+    public function existePeliRota($idPeli){
+        $conn = $this->bd->conexionBD(); 
+        $consulta = "SELECT * FROM peliculaRota WHERE idPeli = '$idPeli'";
+        $result = $conn->query($consulta);
+
+        if($result->num_rows === 0){// no se ha conseguido ninguna coincidencia, no esta resgistrado
+            return false; 
+        }
+        else{
+            return true; 
+        }
+
+    }
 
 
     
