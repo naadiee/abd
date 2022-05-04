@@ -185,12 +185,37 @@ class consultasBD{
 
     }
 
+    public function getSalas(){
+        $conn = $this->bd->conexionBD();
+        $map = []; 
+        $consulta = "SELECT * FROM sala WHERE aforo > 0 "; 
+        $result = $conn->query($consulta); 
 
+        if($result){ // no hay problema en la consulta realizada 
+            if($result->num_rows > 0){//comprobamos que hay mas de una fila 
+                foreach($result as $fila){
+                    $map[] = $fila; 
+                }
+
+            }
+
+        }
+        return $map;
+
+    }
+
+    public function addSocioSala($idSala, $idSocio){
+        $conn = $this->bd->conexionBD();
+        $consulta = "INSERT INTO asistentesSesiones (idSala, idSocio) VALUES ($idSala, '$idSocio')"; 
+        $conn->query($consulta);
+
+
+    }
     
 
 
 
-
+    
 
 
 }//clase

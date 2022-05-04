@@ -29,7 +29,6 @@ $result = $bd->obtenerPeliculas();
 
                 if($disponible === "si"){
 
-                
 
         ?>
                 

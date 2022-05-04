@@ -35,7 +35,7 @@
 	<ul id = "nav">
 		<li><a href="index.php">Inicio</a></li>
         <li><a href="catalogo.php">Catalogo</a></li>
-		<li><a href="favoritos.php">Sugerencias</a></li>
+		<li><a href="sesionesCine.php">Sesiones de cine</a></li>
        
 		
 			<?php
