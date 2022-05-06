@@ -206,7 +206,7 @@ class consultasBD{
 
     public function addSocioSala($idSala, $idSocio){
         $conn = $this->bd->conexionBD();
-        $consulta = "INSERT INTO asistentesSesiones (idSala, idSocio) VALUES ($idSala, '$idSocio')"; 
+        $consulta = "INSERT INTO asistentesSesiones (idSala, idSocio) VALUES ('$idSala', '$idSocio')"; 
         $conn->query($consulta);
 
 
