@@ -21,7 +21,7 @@ $result = $bd->obtenerPeliculas();
 		
     <?php require('includes/comun/cabecera.php');?>
 
-        <div class="filaProductos">
+        <div class="filaPelis">
         <?php
             foreach($result as $fila){ //falta corchete fin 
                 $link = "pelicula.php?id=" . $fila["id"];
@@ -32,7 +32,7 @@ $result = $bd->obtenerPeliculas();
 
         ?>
                 
-            <div class="producto">
+            <div class="pelicula">
                 <a href=<?php echo "'$link'"?>> <img src='img/pelicula.jpg' alt='imagen'></a>
                 <h3 class="info-texto"><?php echo $fila["nombre"];?></h3>            
 

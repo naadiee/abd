@@ -36,12 +36,12 @@ $bd = new consultasBD();
 
         echo "
     
-            <div class='mostrarProd'>
-            <div class='producto_img'> 
-                <img src='img/pelicula.jpg' alt='imagen' class='imgProducto'>
+            <div class='mostrarPelicula'>
+            <div class='peli_img'> 
+                <img src='img/pelicula.jpg' alt='imagen' class='imgPelicula'>
             </div> 
 
-            <div class='datosProductos'>
+            <div class='datosPeli'>
                 <p><strong>$nombre</strong></p> 
                 <form action='gestionPrestamos.php' method='POST'>
                 <input type='hidden' name='hidden_id' value='$id'>

@@ -150,51 +150,19 @@ body{
 	height: 100px;
 
 }
-/*  PAGINA DEL ADMIN         */
 
-.botones_noticias{
-	text-align:center;
-	padding:1px;
-	margin:10px;
-	background-color: #030303;
-	border: 2px solid;
-	border-radius:5px;
- 
- }
 
- 
-input.boton[type="submit"]:hover {
-	background-color: #1e1e1e;
-	color: #f2f2f2;
-	box-shadow: #f2f2f2 3px 3px;
-}
-.boton {
-	padding:10px;
-	font-size:15px;
-	margin:15px;
-	border:2px;
-	border-radius:10px;
-	background-color: #1e1e1e;
-	color: #f2f2f2;
-	
-    font: bold 15px Verdana;
-    text-align:center;
-}
- /* ------------------------------------- */
-
- /*  PAGINA DEL PRODUCTO         */
-
-div.mostrarProd{
+div.mostrarPelicula{
 	text-align: center;
 }
 
-div.producto_img img.imgProducto{
+div.peli_img img.imgPelicula{
 	width: 200px;
     height: 200px;
 }
  
 
- div#contenedor div.datodatosProductos{
+ div#contenedor div.datosPeli{
     display: inline-block;
     width: 30%;
 	align-items: center;
@@ -207,14 +175,14 @@ div.producto_img img.imgProducto{
 
  /*  CATALOGO        */
 
-div.filaProductos{
+div.filaPelis{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	text-align: center;
 }
 
 
-div.filaProductos div.producto img{
+div.filaPelis div.pelicula img{
 	width: 300px;
     height: 300px;	
 }
@@ -223,7 +191,7 @@ div.filaProductos div.producto img{
 
  /*   CARRITO  */
 
- div.celdaProductoCarro{
+ div.celda{
 	width: 80%;
     height: 150px;
 	border: 2px solid; /*para saber que ocupa*/
@@ -233,7 +201,7 @@ div.filaProductos div.producto img{
  }
 
 
- div.producto_carro_img{
+ div.celda_peli_img{
 
 	display: grid;
 	grid-template-columns: repeat(2);
@@ -244,61 +212,13 @@ div.filaProductos div.producto img{
 
 
 
- div.producto_carro_img img{
+ div.celda_peli_img img{
 	width: 100px;
     height: 100px;
  }
 
- div.datosCarro {
-
-	float: right;
-	width: 150px;
-	height: 150px;
- }
-
- div.botonCancelar{
+ div.botonSocio{
 	float: right;
 	
 }
 
- /* BOTON CARRITO REALIZAR PEDIDO */
-
-
- .botonHacerPedido{
-	text-align:right;
-	padding:1px;
-	margin:10px;
-	border-radius:5px;
- 
- }
-
- 
-input.boton[type="submit"]:hover {
-	background-color: #1e1e1e;
-	color: #f2f2f2;
-	box-shadow: #058405 3px 3px;
-}
-.boton {
-	padding:10px;
-	font-size:15px;
-	margin:15px;
-	border:2px;
-	border-radius:10px;
-	background-color: #1e1e1e;
-	color: #f2f2f2;
-	
-    font: bold 15px Verdana;
-    text-align:center;
-}
-
-/*-------------------------------------*/
-
-/* MIS PEDIDOS */
-
-
-
-div.construccion{
-	
-	text-align:center;
-
-}

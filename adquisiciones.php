@@ -35,28 +35,28 @@ $result = $bd->obtenerPeliculas();
                 $nombre = $pelicula['nombre'];                 
 
                 echo "
-                <div class=celdaProductoCarro>
-                    <div class='producto_carro_img'> 
-                        <img src='img/pelicula.jpg' alt='imagen' class='imgProductoCarro'>
+                <div class=celda>
+                    <div class='celda_peli_img'> 
+                        <img src='img/pelicula.jpg' alt='imagen' class='imgCelda'>
                         <p>$nombre </p>
         
                     </div>
                   
-                    <div class='botonCancelar'>
+                    <div class='botonSocio'>
                         <form action='gestionPrestamos.php' method='POST'>
                             <input type='hidden' name='hidden_id' value='$idPeli'>
                             <input type='submit' id='delete_peli' name='delete_peli' value='Eliminar titulo'></p>                          
                         </form>
                     </div>
 
-                    <div class='botonCancelar'>
+                    <div class='botonSocio'>
                         <form action='gestionPrestamos.php' method='POST'>
                             <input type='hidden' name='hidden_id' value='$idPeli'>
                             <input type='submit' id='ampliar_peli' name='ampliar_peli' value='Ampliar tiempo'></p>                            
                         </form>
                     </div>
 
-                    <div class='botonCancelar'>
+                    <div class='botonSocio'>
                     <form action='gestionPrestamos.php' method='POST'>
                         <input type='hidden' name='hidden_id' value='$idPeli'>
                         <input type='submit' id='reportar_danos' name='reportar_danos' value='Reportar daños'></p>
@@ -69,7 +69,7 @@ $result = $bd->obtenerPeliculas();
                     </form>
                     </div>
 
-                    <div class='botonCancelar'>
+                    <div class='botonSocio'>
                         <form action='gestionPrestamos.php' method='POST'>
                             <input type='hidden' name='hidden_id' value='$idPeli'>
                             <input type='submit' id='devolver_peli' name='devolver_peli' value='Devolver'></p>                            

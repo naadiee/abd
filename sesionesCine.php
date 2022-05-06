@@ -37,14 +37,14 @@ $bd = new consultasBD();
                 $numSala = $elemento["id"];    
 
                 echo "
-                <div class=celdaProductoCarro>
-                    <div class='producto_carro_img'> 
-                        <img src='img/sala.jpg' alt='imagen' class='imgProductoCarro'>
+                <div class=celda>
+                    <div class='celda_peli_img'> 
+                        <img src='img/sala.jpg' alt='imagen' class='imgCelda'>
                         <p>$nombre </p>
         
                     </div>
                   
-                    <div class='botonCancelar'>
+                    <div class='botonSocio'>
                         <form action='gestionSalas.php' method='POST'>
                             <input type='hidden' name='hidden_id' value='$numSala'>
                             <input type='submit' id='asistir' name='asistir' value='Asistir'></p>                          
