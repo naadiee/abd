@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-05-2022 a las 13:10:47
+-- Tiempo de generación: 08-05-2022 a las 13:45:39
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.1.4
 
@@ -13,6 +13,8 @@ SET time_zone = "+00:00";
 
 --
 -- Base de datos: `videoclub`
+CREATE DATABASE IF NOT EXISTS `videoclub` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `videoclub`;
 --
 
 -- --------------------------------------------------------
@@ -20,18 +22,11 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `asistentesSesiones`
 --
+
 CREATE TABLE `asistentesSesiones` (
   `idSala` varchar(10) NOT NULL,
   `idSocio` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `asistentesSesiones`
---
-
-INSERT INTO `asistentesSesiones` (`idSala`, `idSocio`) VALUES
-('1', '06015058'),
-('3', '06015058');
 
 -- --------------------------------------------------------
 
@@ -52,14 +47,14 @@ CREATE TABLE `pelicula` (
 
 INSERT INTO `pelicula` (`id`, `nombre`, `categoria`, `disponible`) VALUES
 ('1', 'Narnia', 'prueba', 'si'),
-('2', 'Ted', 'prueba', 'no'),
+('2', 'Ted', 'prueba', 'si'),
 ('3', 'Soy leyenda', 'prueba', 'si'),
 ('4', 'Los pitufos', 'prueba', 'si'),
 ('5', 'Los simpson', 'prueba', 'si'),
-('6', 'Se busca', 'prueba', 'no'),
+('6', 'Se busca', 'prueba', 'si'),
 ('7', '2012', 'prueba', 'si'),
 ('8', 'Grease', 'prueba', 'si'),
-('9', 'Pasajero 57', 'prueba', 'no');
+('9', 'Pasajero 57', 'prueba', 'si');
 
 -- --------------------------------------------------------
 
@@ -72,15 +67,6 @@ CREATE TABLE `peliculaRota` (
   `idSocio` varchar(10) NOT NULL,
   `motivo` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `peliculaRota`
---
-
-INSERT INTO `peliculaRota` (`idPeli`, `idSocio`, `motivo`) VALUES
-('2', '06015058', 'discoRayado'),
-('6', '06015058', 'discoRoto'),
-('9', '06015058', 'discoRoto');
 
 -- --------------------------------------------------------
 
@@ -144,8 +130,7 @@ CREATE TABLE `socio` (
 --
 
 INSERT INTO `socio` (`id`, `nombre`, `pass`) VALUES
-('06015058', 'Marlon', '1234'),
-('234', 'Juan', '1234');
+('06015058', 'Marlon', '1234');
 
 --
 -- Índices para tablas volcadas
