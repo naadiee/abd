@@ -28,12 +28,12 @@
 		?>
 	</div>
 	<div id= "titulo">
-		<a href = "inicio.php"><img id = 'logo' src="img/logo.png"  alt="img1"></a>
+		<a href = "index.php"><img id = 'logo' src="img/logo.png"  alt="img1"></a>
 	</div>
 </div>
 <nav id="navigator">
 	<ul id = "nav">
-		<li><a href="inicio.php">Inicio</a></li>
+		<li><a href="index.php">Inicio</a></li>
         <li><a href="catalogo.php">Catalogo</a></li>
 		<li><a href="sesionesCine.php">Sesiones de cine</a></li>
        
