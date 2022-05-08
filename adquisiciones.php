@@ -42,12 +42,7 @@ $result = $bd->obtenerPeliculas();
         
                     </div>
                   
-                    <div class='botonSocio'>
-                        <form action='gestionPrestamos.php' method='POST'>
-                            <input type='hidden' name='hidden_id' value='$idPeli'>
-                            <input type='submit' id='delete_peli' name='delete_peli' value='Eliminar titulo'></p>                          
-                        </form>
-                    </div>
+                
 
                     <div class='botonSocio'>
                         <form action='gestionPrestamos.php' method='POST'>

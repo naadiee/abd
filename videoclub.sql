@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-05-2022 a las 13:45:39
+-- Tiempo de generación: 08-05-2022 a las 15:47:30
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.1.4
 
@@ -13,9 +13,9 @@ SET time_zone = "+00:00";
 
 --
 -- Base de datos: `videoclub`
+--
 CREATE DATABASE IF NOT EXISTS `videoclub` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `videoclub`;
---
 
 -- --------------------------------------------------------
 
@@ -80,16 +80,6 @@ CREATE TABLE `prestamo` (
   `idSocio` varchar(10) NOT NULL,
   `idPelicula` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `prestamo`
---
-
-INSERT INTO `prestamo` (`id`, `fechaInicio`, `idSocio`, `idPelicula`) VALUES
-(1, '2022-05-07', '06015058', '3'),
-(2, '2022-05-07', '06015058', '4'),
-(3, '2022-05-07', '06015058', '8'),
-(4, '2022-05-07', '06015058', '7');
 
 -- --------------------------------------------------------
 
