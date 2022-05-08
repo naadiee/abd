@@ -7,7 +7,6 @@ $idSocio = $_SESSION["userID"];
 
 if(isset($_POST['add_peli'])){
     $idPeli = htmlspecialchars(trim(strip_tags($_POST["hidden_id"]))); 
-    $idSocio = htmlspecialchars(trim(strip_tags($_POST["hidden_idSocio"])));  
 //echo $idPeli; 
 //echo "--";
 //$idReserva = strval($bd->contarPrestamo()); 
