@@ -20,7 +20,7 @@ $bd = new consultasBD();
     <?php require('includes/comun/cabecera.php');?>
 
     <?php
-    if(isset($_SESSION['login']) && ($_SESSION['login'] === true)){
+    
         $idSocio = $_SESSION["userID"];
         $datos = $bd->getPelicula($_GET['id']); // conseguimos toda la info para mostrarla 
         
@@ -53,7 +53,6 @@ $bd = new consultasBD();
                 </form>
             </div>
             </div>";
-    }
     ?>
 
 	
