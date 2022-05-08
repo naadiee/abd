@@ -107,7 +107,7 @@ class consultasBD{
     public function resgistrarPrestamo($id,$idSocio,$idPeli){
         $conn = $this->bd->conexionBD(); 
 
-        $consulta = "INSERT INTO prestamo (id, fechaInicio, idSocio, idPelicula) VALUES ('$id', NOw(),'$idSocio','$idPeli')";
+        $consulta = "INSERT INTO prestamo (id, fechaInicio, idSocio, idPelicula) VALUES ($id, NOw(),'$idSocio','$idPeli')";
 
         $conn->query($consulta);
 
